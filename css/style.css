@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+.transition{
+    transition: all .1s ease-in-out;
+}
+
+.jumbotron{
+    padding: 60px;
+    background-color: #DFB03D;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+
+nav{
+    background-color: #fff;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+
+nav ul{
+    padding-inline: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem 1rem;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+nav a{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+nav a:hover {
+    font-weight: bold;
+    background-color: #DFB03D;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFECC1;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: inline;
+}
+
+.dropbutton{
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFECC1;
+    color: black;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+  
+.dropbutton:hover, .dropbutton:focus{
+    background-color: #DFB03D;
+}
+  
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover{
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #DFB03D;}
+.show{
+    display:block;
+}
+
+main{
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+#content{
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+.section{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 3rem;
+}
+
+h2, h3{
+    color: black;
+}
+
+.featured-image{
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    
+}
+
+.card i{
+    font-size: 3rem;
+    color: black;
+}
+
+.list{
+    height: 100%;
+    display: flex;
+    margin-inline: auto;  
+}
+
+.list ul{
+    padding: 1.5rem 1rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.list li{
+    list-style-type: none;
+}
+
+.list li a{
+    text-decoration: none;
+    font-size: 3rem;
+    color: black;
+    transition: all .1s ease-in-out;
+}
+
+.list li a:hover{
+    font-size: 3.5rem;
+    color: #DFB03D;
+}
+
+.section a{
+    text-decoration: none;
+    color: black;
+    transition: all .1s ease-in-out;
+}
+
+.section a:hover{
+    color: #DFB03D;
+}
+
+aside{
+    flex: 1;
+    margin-top: 3rem;
+    /* border: 3px solid black; */
+}
+
+.profile header{
+    text-align: center;
+}
+
+.profile img{
+    width: 200px;
+}
+
+footer{
+    padding: 20px;
+    color: white;
+    background-color: #DFB03D;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+    main{
+        flex-flow: column nowrap;
+    }
+    
+    main aside{
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul{
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: .5rem;
+    }
+
+    main aside{
+        align-self: stretch;
+    }
+}
